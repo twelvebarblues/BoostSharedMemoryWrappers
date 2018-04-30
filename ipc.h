@@ -204,7 +204,7 @@ namespace ipc
          * @param segment a reference to the shared memory segment
          */
         SharedVector(const char* name, segment& segment)
-            : SharedBase<sVector>(name, true)
+            : SharedBase<sVector>(name, false)
         {
             this->_object = segment.find<sVector>(name).first;
         }
