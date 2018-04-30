@@ -43,7 +43,8 @@ int main(int argc, char* argv[])
     {
         std::cout << "In child" << std::endl;
         SC sm;
-        std::cout << "Found: " << sm._vector->back()._name.c_str() << "\n";
+        employee& e = sm._vector->back();
+        std::cout << "Found: " << e._name << "\n";
     }
     return 0;
 };
